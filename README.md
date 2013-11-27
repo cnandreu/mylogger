@@ -4,5 +4,5 @@ This is just an experiment. I'm playing with the new way to write Cordova Plugin
 
 ## Usage
 
-    var logger = new Logger();
+    var logger = new MyLogger();
     logger.log('hello world');
