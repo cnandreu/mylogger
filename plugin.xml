@@ -5,9 +5,13 @@
       version="0.2.4">
 
     <name>MyLogger</name>
-    <description>Worklight Logger Plugin</description>
+    <description>MyLogger Plugin</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,worklight,logger</keywords>
+    <keywords>cordova,logger</keywords>
+
+    <js-module src="www/MyLogger.js" name="MyLogger">
+        <clobbers target="window.MyLogger" />
+    </js-module>
 
     <!-- ios -->
     <platform name="ios">
@@ -18,8 +22,8 @@
             </feature>
         </config-file>
 
-      <js-module src="www/MyLogger.js" name="logger">
-          <clobbers target="MyLogger" />
+      <js-module src="www/native/log.js" name="MyLoggerNative">
+          <merges target="window.MyLogger" />
       </js-module>
 
       <header-file src="src/ios/MyLogger.h" />
@@ -28,5 +32,3 @@
     </platform>
 
 </plugin>
-
-

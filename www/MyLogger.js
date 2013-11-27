@@ -1,12 +1,11 @@
-var exec = require('cordova/exec');
+module.exports = {
 
-var MyLogger = function (callback) {
-  this.callback = callback;
+  name : function () {
+    alert('MyLogger');
+  },
+
+  log : function (msg) {
+    alert(msg);
+  }
+
 };
-
-MyLogger.prototype.log = function (msg) {
-  exec(this.callback, this.callback, 'MyLogger', 'log', [msg]);
-};
-
-
-module.exports = MyLogger;
