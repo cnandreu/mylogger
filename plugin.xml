@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="com.cnandreu.mylogger"
+      version="0.2.4">
+
+    <name>MyLogger</name>
+    <description>Worklight Logger Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,worklight,logger</keywords>
+
+    <!-- ios -->
+    <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+            <feature name="MyLogger">
+                <param name="ios-package" value="MyLogger" />
+            </feature>
+        </config-file>
+
+      <js-module src="www/MyLogger.js" name="logger">
+          <clobbers target="MyLogger" />
+      </js-module>
+
+      <header-file src="src/ios/MyLogger.h" />
+      <source-file src="src/ios/MyLogger.m" />
+
+    </platform>
+
+</plugin>
+
+
